@@ -5,7 +5,7 @@
   "use strict";
   var I = window.BOI_I18N;
   var LANGS = ["en", "ir", "ru"];
-  var RATE_FEED = "https://iradone.com/data/today.json";
+  var RATE_FEED = "https://iradgov.org/data/today.json";
   var PEG = 8.4;
   var GOV = "https://iradgov.org/";
 

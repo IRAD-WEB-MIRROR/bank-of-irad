@@ -263,6 +263,7 @@ window.BOI_I18N = {
       m5t: "Toluk tekst Bankın id.gov zonasındagı murdagı betterinin arkhivinde saktalat, alar köchürülüp jatat. Kıskacha mazmunu <a href=\"/currency-board.html\">Valyuta keñeshi</a> betinde berilgen.",
       m6t: "Aylık tablitsalar bul saytta jarıyaloo üchün dayardalıp jatat. Aga cheyin körsötküchtör Jıldık otchette berilet.",
       aboutH: "Bank jönündö",
+      aboutLeadA: "Banktın jetekchiligi jana tüzümü", ctA: "Baylanısh jana jarandardı kabıl aluu", noticesArch: "Banktın 2016-jıldan bergi murdagı press-relizderi <a href=\"/news.html\">press-kızmattın arkhivinde</a>.",
       aboutLede: "Irad Bankı Irad Atayın Ekonomikalık Zonasının akcha-kredit organı. Al 1993-jılkı Bank jana sooda valyutası jönündögü Mıyzam menen negizdelip, 2008-jılkı Irad Bankı jönündögü Mıyzam menen kayra tüzülgön. Bashkı keñsesi Talasta.",
       fnH: "Funktsiyalar",
       fnP: "<ul><li><b>Akcha chıgaruu jana rezervder.</b> Bank som banknottoru menen monetalarının jalgız emissioneru jana alardı kamsızdagan dollar rezervderin saktayt.</li><li><b>Köz saluu.</b> Al kommertsiyalık banktarga, mikrokarjı mekemelerine jana valyuta almashtıruu punkttarına litsenziya beret, rezerv jana kapital talaptarın belgileyt, banktardı teksheret.</li><li><b>Tölömdör.</b> Al banktar esepteshüü esepterin karmagan Irad Bankının Kliring palatasın jürgüzöt.</li><li><b>Korrespondent bankıng.</b> Al Irad banktarı chet ölkögö tölöm jürgüzgön Almatı jana Stambuldagı korrespondent tartipterdi köz salat.</li></ul><p>Bank Ökmöttün esepterin jürgüzböyt — alar Talasbankta; eksport kireshesinin eskrousuna katıshpayt — anı Irad Tashkı soodasının eskrou ookumatı köz salat.</p>",
@@ -369,6 +370,7 @@ window.BOI_I18N = {
       m5t: "Полный текст хранится в архиве прежних страниц Банка в зоне id.gov, которые переносятся. Краткое изложение — на странице <a href=\"/currency-board.html\">Валютный совет</a>.",
       m6t: "Ежемесячные таблицы готовятся к публикации на этом сайте. До тех пор данные приводятся в Годовом отчёте.",
       aboutH: "О Банке",
+      aboutLeadA: "Руководство и структура Банка", ctA: "Контакты и приём граждан", noticesArch: "Прежние пресс-релизы Банка, начиная с 2016 года, — в <a href=\"/news.html\">архиве пресс-службы</a>.",
       aboutLede: "Банк Ирада (<i>Irad Bankı</i>) — денежно-кредитный орган Особой экономической зоны Ирада. Он учреждён Законом о банках и коммерческой валюте 1993 года и преобразован Законом о Банке Ирада 2008 года. Головной офис находится в Таласе.",
       fnH: "Функции",
       fnP: "<ul><li><b>Эмиссия и резервы.</b> Банк — единственный эмитент банкнот и монет сома; он хранит покрывающие их долларовые резервы.</li><li><b>Надзор.</b> Он лицензирует коммерческие банки, микрофинансовые организации и пункты обмена валюты, устанавливает требования к резервам и капиталу и проводит проверки банков.</li><li><b>Платежи.</b> Он управляет Клиринговой палатой Банка Ирада, где банки держат расчётные счета.</li><li><b>Корреспондентские отношения.</b> Он надзирает за корреспондентскими отношениями в Алматы и Стамбуле, через которые банки Ирада проводят платежи за рубеж.</li></ul><p>Банк не ведёт счета Правительства — они находятся в Таласбанке — и не участвует в эскроу экспортной выручки, за которым надзирает Управление эскроу внешней торговли Ирада.</p>",
@@ -393,3 +395,4 @@ window.BOI_I18N = {
     }
   }
 };
+window.SITE_I18N = window.BOI_I18N;

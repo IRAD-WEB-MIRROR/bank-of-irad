@@ -97,7 +97,9 @@
 
   /* ---------- chrome ---------- */
   var NAV = [["home", "/"], ["rates", "/rates.html"], ["board", "/currency-board.html"], ["som", "/som.html"], ["notices", "/notices.html"], ["banks", "/banks.html"], ["pubs", "/publications.html"], ["about", "/about.html"]];
-  var NAVPAGE = { notice: "notices" };
+  var NAVPAGE = { notice: "notices", leadership: "about", contacts: "about", news: "about", documents: "about", vacancies: "about", faq: "about" };
+  /* information pages, listed in the footer after "About the Bank" */
+  var INFO = [["leadership", "/leadership.html"], ["news", "/news.html"], ["documents", "/documents.html"], ["vacancies", "/vacancies.html"], ["faq", "/faq.html"]];
   function logoSrc(white) {
     var b = LANG === "ru" ? "bankofirad-logo-cyrillic" : LANG === "ir" ? "bankofirad-logo-iradi" : "bankofirad-logo";
     if (white) b = LANG === "ru" ? "bankofirad-logo-cyrillic-white" : "bankofirad-logo-white";
@@ -134,8 +136,9 @@
         '<div><img class="flogo" src="' + logoSrc(true) + '" alt="' + esc(t("siteName")) + '" width="207" height="46"><address>' + t("footAddr") + "</address>" + '<a class="tulpar-ch" href="https://tulparapp.com/app/#sub=bankofirad" rel="noopener"><img src="/assets/tulpar.svg" alt="" width="22" height="22"><span>' + esc(t("footTulpar")) + "<small>@bankofirad</small></span></a></div>" +
         "<div><h4>" + esc(t("footBank")) + "</h4><ul>" +
         ["rates", "board", "som", "notices", "banks", "pubs", "about"].map(function (k) { return '<li><a href="' + navHref(k) + '">' + esc(t("nav_" + k)) + "</a></li>"; }).join("") +
+        INFO.map(function (p) { return '<li><a href="' + p[1] + '">' + esc(t("kit_nav_" + p[0])) + "</a></li>"; }).join("") +
         "</ul></div>" +
-        "<div><h4>" + esc(t("footGov")) + '</h4><ul><li><a href="' + GOV + '">' + esc(t("footGovPortal")) + '</a></li><li><a href="https://e-irad.org/">' + esc(t("footServices")) + '</a></li><li><a href="/about.html#contact">' + esc(t("footContact")) + "</a></li></ul>" +
+        "<div><h4>" + esc(t("footGov")) + '</h4><ul><li><a href="' + GOV + '">' + esc(t("footGovPortal")) + '</a></li><li><a href="https://e-irad.org/">' + esc(t("footServices")) + '</a></li><li><a href="/contacts.html">' + esc(t("footContact")) + "</a></li></ul>" +
         '<p class="small" style="margin-top:14px;color:#a9bbb0">' + esc(t("footDirective")) + "</p></div></div>" +
         '<div class="fine"><span class="govline"><img src="/assets/state-emblem-160.png" alt="" width="22" height="22">' + esc(t("footCopy", { y: iradNow().getFullYear() })) + "</span><span>" + esc(t("footTime")) + "</span></div></div></footer>";
     }
@@ -160,7 +163,10 @@
     document.documentElement.lang = I.htmlLang[LANG];
     var tk = document.body.getAttribute("data-title");
     var name = t("siteName");
-    if (tk != null) document.title = (tk && has("title_" + tk) && t("title_" + tk) ? t("title_" + tk) + " | " : "") + name;
+    var tEn = document.body.getAttribute("data-title-en");
+    if (tEn != null) { var tp = LANG === "en" ? tEn : (P["title_" + tk] || tEn); document.title = (tp === name ? "" : tp + " | ") + name; }
+    else if (tk != null) document.title = (tk && has("title_" + tk) && t("title_" + tk) ? t("title_" + tk) + " | " : "") + name;
+    $$("[data-date]").forEach(function (el) { el.textContent = fmtDate(el.getAttribute("data-date")); });
   }
   function setLang(l) {
     if (LANGS.indexOf(l) < 0 || l === LANG) return;

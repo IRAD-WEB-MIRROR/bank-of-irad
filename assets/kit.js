@@ -179,7 +179,7 @@
    "kit_nav": "Bank jönündö",
    "kh1": "Banktagı kızmat orundarına konkurs",
    "kh2": "Banktın betteri bank.iradgov.org darekine köchtü",
-   "kh3": "Nurjandagı rezervdik orunda jañı jabdıktar"
+   "kh3": "Nurzhandagı rezervdik orunda jañı jabdıktar"
   },
   "ru": {
    "kit_home": "Главная",

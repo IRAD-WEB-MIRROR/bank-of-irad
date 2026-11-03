@@ -97,7 +97,7 @@
 
   /* ---------- chrome ---------- */
   var NAV = [["home", "/"], ["rates", "/rates.html"], ["board", "/currency-board.html"], ["som", "/som.html"], ["notices", "/notices.html"], ["banks", "/banks.html"], ["pubs", "/publications.html"], ["about", "/about.html"]];
-  var NAVPAGE = { notice: "notices", leadership: "about", contacts: "about", news: "about", documents: "about", vacancies: "about", faq: "about" };
+  var NAVPAGE = { quiz: "som", notice: "notices", leadership: "about", contacts: "about", news: "about", documents: "about", vacancies: "about", faq: "about" };
   /* information pages, listed in the footer after "About the Bank" */
   var INFO = [["leadership", "/leadership.html"], ["news", "/news.html"], ["documents", "/documents.html"], ["vacancies", "/vacancies.html"], ["faq", "/faq.html"]];
   function logoSrc(white) {
@@ -460,6 +460,8 @@
     });
     hit.addEventListener("mouseleave", function () { tip.style.display = "none"; });
   };
+
+  pages.quiz = function () { if (window.BOI_QUIZ) window.BOI_QUIZ(LANG); };
 
   pages.pubs = function () {
     $$(".pubs button[data-msg]").forEach(function (b) {
